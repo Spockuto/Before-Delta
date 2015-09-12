@@ -1,0 +1,130 @@
+   84  cleatr
+   85  clear
+   86  fdisk -l
+   87  sudo fdisk -l
+   88  fdisk /dev/sda
+   89  sudo fdisk /dev/sda
+   90  clear
+   91  pvcreate /dev/sda5 /dev/sda6 /dev/sda7
+   92  sudo pvcreate /dev/sda5 /dev/sda6 /dev/sda7
+   93  sudo pvcreate /dev/sda8
+   94  clear
+   95  pvscan
+   96  sudo pvscan
+   97  clear
+   98  sudo vgcreate spider /dev/sda6 /dev/sda7 /dev/sda8
+   99  vgdisplay
+  100  sudo vgdisplay
+  101  sudo vgs
+  102  clear
+  103  sudo lvcreate -l 256 -n redhat spider
+  104  sudo lvcreate -l 128 -n ubuntu spider
+  105  sudo lvcreate -l 512 -n kali spider
+  106  lvs
+  107  sudo lvs
+  108  clear
+  109  mkfs -t ext4 /dev/spider/redhat
+  110  clear
+  111  sudo mkfs -t ext4 /dev/spider/redhat
+  112  clear
+  113  sudo mkfs -t ext4 /dev/spider/ubuntu
+  114  clear
+  115  sudo mkfs -t ext4 /dev/spider/kali
+  116  clear
+  117  mount -t ext4 /dev/spider/redhat /home/venkkatesh/Desktop/
+  118  clear
+  119  sudo mount -t ext4 /dev/spider/redhat /home/venkkatesh/Desktop/
+  120  sudo mount -t ext4 /dev/spider/ubuntu /home/venkkatesh/Desktop/
+  121  sudo mount -t ext4 /dev/spider/kali /home/venkkatesh/Desktop/
+  122  clear
+  123  mkdir /home/venkkatesh/Desktop/redhat
+  124  sudo mkdir /home/venkkatesh/Desktop/redhat
+  125  sudo mount -t ext4 /dev/spider/redhat /home/venkkatesh/Desktop/redhat/
+  126  pvs
+  127  sudo pvs
+  128  sudo lvs
+  129  sudo vgs
+  130  sudo mkdir /home/venkkatesh/Desktop/kali
+  131  sudo mount -t ext4 /dev/spider/kali /home/venkkatesh/Desktop/kali/
+  132  sudo mount -t ext4 /dev/spider/redhat /home/venkkatesh/Desktop/redhat/
+  133  sudo mkdir /home/venkkatesh/Desktop/redhat
+  134  sudo mount -t ext4 /dev/spider/redhat /home/venkkatesh/Desktop/redhat/
+  135  sudo mkdir /home/venkkatesh/Desktop/ubuntu
+  136  sudo mount -t ext4 /dev/spider/ubuntu /home/venkkatesh/Desktop/ubuntu/
+  137  clear
+  138  sudo vi /etc/fstab
+  139  sudo nano /etc/fstab
+  140  clear
+  141  man fsck
+  142  fsck
+  143  cleat
+  144  clear
+  145  lvextend -L+512M /dev/spider/redhat
+  146  sudo lvextend -L+512M /dev/spider/redhat
+  147  resize2fs /dev/spider/redhat
+  148  sudo resize2fs /dev/spider/redhat
+  149  sudo resize2fs /dev/spider/kali
+  150  sudo lvreduce -L-512M /dev/spider/kali
+  151  sudo resize2fs /dev/spider/kali
+  152  clear
+  153  fdisk -l
+  154  sudo fdisk -l
+  155  sudo fdisk -l /dev/sda
+  156  pvcreate /dev/sda5
+  157  clear
+  158  sudo pvcreate /dev/sda5
+  159  sudo fdisk -l /dev/sda
+  160  sudo fdisk  /dev/sda
+  161  t
+  162  sudo fdisk  /dev/sda
+  163  clear
+  164  pvcreate /dev/sda9
+  165  clear
+  166  sudo pvcreate /dev/sda9
+  167  clear
+  168  sudo fdisk  /dev/sda
+  169  partprobe /dev/sda
+  170  sudo mount -t ext4 /dev/spider/kali /home/venkkatesh/Desktop/kali/
+  171  partprobe /dev/sda
+  172  sudo fdisk  /dev/sda
+  173  cleat
+  174  clear
+  175  sudo pvcreate /dev/sda9
+  176  pvs
+  177  sudo pvs
+  178  clear
+  179  vgextend spider /dev/sda9
+  180  clear
+  181  sudo vgextend spider /dev/sda9
+  182  sudo vgs
+  183  clear
+  184  sudo vgreduce spider /dev/sda9
+  185  vgs
+  186  sudo vgs
+  187  clear
+  188  sudo nano /etc/fstab
+  189  cleat
+  190  clear
+  191  umount /home/venkkatesh/Desktop/kali
+  192  clear
+  193  umount /home/venkkatesh/Desktop/redhat
+  194  clear
+  195  sudo umount /home/venkkatesh/Desktop/redhat
+  196  sudo umount /home/venkkatesh/Desktop/ubuntu
+  197  sudo umount /home/venkkatesh/Desktop/kali
+  198  lvremove /dev/spider/kali
+  199  clear
+  200  sudo lvremove /dev/spider/kali
+  201  sudo lvremove /dev/spider/ubuntu
+  202  sudo lvremove /dev/spider/redhat
+  203  sudo vgremove spider 
+  204  sudo vgs
+  205  sudo pvremove /dev/sda6 /dev/sda7 /dev/sda8 /dev/sda9
+  206  clear
+  207  sudo fdisk /dev/sda
+  208  history
+  209  history | tail -n 130
+  210  history | tail -n 130 >/home/venkkatesh/Desktop
+  211  history | tail -n 130 >/home/venkkatesh/Desktop/
+  212  history | tail -n 130 >/home/venkkatesh/Desktop/log.txt
+  213  history | tail -n 130 >/home/venkkatesh/Desktop/log.doc

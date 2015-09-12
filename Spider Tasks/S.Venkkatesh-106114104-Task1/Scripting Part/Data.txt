@@ -1,0 +1,9 @@
+The Cron executes the commands stored in Crontab. It was edited
+by using crontab -e
+
+In the Crontab file , the first part (time config) was set 00 13 * * *
+The command was echo "I am CRON"
+
+Since the output was actual was mailed to /var/spool/ , it was redirected 
+to the terminal display by /dev/pts/0 (assuming you are working in 
+some terminal).

@@ -1,0 +1,7 @@
+The local yum server was done by copying all the package from 
+the RHEL 6 iso with the .xml file to a local directory.
+Once this was done ,3 necessary packages where installed using 
+rpm and the createrepo package was used to create the repomd repository.
+Then the .repo file was created(/etc/yum.repos.d) and edited 
+such that it mapped to the local folder. Then the data was cached.
+Hence , A local yum server was created.
